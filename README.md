@@ -2,6 +2,10 @@
 
 🌟 Implementation of Neural Networks from Scratch Using Python &amp; Numpy 🌟
 
+<p align="center">
+  <img src="images/nn.webp" width="550px">
+</p>
+
 > Uses Python 3.7.4
 
 #### This repository has detailed math equations and graphs for every feature implemented that can be used to serve as basis for greater, in-depth understanding of Neural Networks
@@ -16,7 +20,7 @@ pip install -r requirements.txt
 ## Roadmap 📑
 
 - [x] Activation Functions
-- [ ] Loss Functions
+- [x] Loss Functions
 - [ ] Optimizers
 - [ ] Neuron Architecture
 - [ ] Layer Architecture
