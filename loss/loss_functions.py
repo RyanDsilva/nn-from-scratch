@@ -2,12 +2,18 @@ import numpy as np
 
 
 def MSE(y, yhat):
-    return np.square(y-yhat).mean()
+    return np.mean(np.power(y-yhat, 2))
+
+
+def dMSE(y, yhat):
+    return 2*(yhat-y)/y.size
 
 
 def MAE(y, yhat):
     return np.sum(np.abs(y-yhat))
 
 
-def CrossEntropy(y, yhat):
-    return -np.sum(y*np.log(yhat))
+def dMAE(y, yhat):
+    if y == yhat:
+        return 1
+    return -1
