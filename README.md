@@ -75,12 +75,20 @@ True Values:
 
 ## Roadmap 📑
 
-- [x] Activation Functions
-- [x] Loss Functions
-- [x] Optimizers - Gradient Descent
+- [x] Basic Activation Functions
+- [x] Basic Loss Functions
+- [x] Gradient Descent
 - [x] Layer Architecture
 - [x] Wrapper Class
 - [x] Hyperparameters Configuration
+- [ ] Exotic Functions
+  - [ ] SoftMax Activation
+  - [ ] Gradient Descent w/ Momentum
+  - [ ] RMSProp Optimizer
+  - [ ] Adam Optimizer
+  - [ ] CrossEntropy Loss Function
+  - [ ] GeLu Activation
+- [ ] Clean Architecture
 
 ##### This project is not meant to be production ready but instead serve as the foundation repository to understand the in-depth working of Neural Networks down to the mathematics of the task.
 
