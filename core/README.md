@@ -43,3 +43,8 @@ The weights of each layer are then updated based on the gradients and learning r
 <img src="images/grad_desc.svg">
 
 This process happens for each neuron in each layer. This is the `learning process`.
+
+#### Terminology
+
+When this process of forward and backpropogation completes one pass through the training data, it is called as an `epoch`. To improve the accuracy of the model, we generally let it go through multiple passes of the training data i.e. multiple epochs.
+Parameters like `learning_rate` and `epochs` are called as Hyperparameters. These refer to manually tunable numbers that may result in improved performance.
