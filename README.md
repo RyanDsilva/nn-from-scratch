@@ -70,7 +70,7 @@ True Values:
 - [x] Basic Loss Functions
 - [x] Gradient Descent
 - [x] Layer Architecture
-- [x] Wrapper Class
+- [x] Wrapper Classes
 - [x] Hyperparameters Configuration
 - [ ] Exotic Functions
   - [ ] SoftMax Activation
@@ -79,7 +79,9 @@ True Values:
   - [ ] Adam Optimizer
   - [ ] CrossEntropy Loss Function
   - [ ] GeLu Activation
+- [ ] Regularization
 - [ ] Clean Architecture
+- [ ] UI (Similar to Tensorflow Playground)
 
 ##### This project is not meant to be production ready but instead serve as the foundation repository to understand the in-depth working of Neural Networks down to the mathematics of the task.
 
