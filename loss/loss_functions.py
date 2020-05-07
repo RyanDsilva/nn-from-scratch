@@ -14,6 +14,4 @@ def MAE(y, yhat):
 
 
 def dMAE(y, yhat):
-    if y == yhat:
-        return 1
-    return -1
+    return 1 if y == yhat else -1

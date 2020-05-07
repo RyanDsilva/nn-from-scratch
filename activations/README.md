@@ -6,6 +6,8 @@
 
 ## Activation Functions
 
+Activation functions live inside each neuron in the neural network layers and modify the data they receive before passing it to the next layer. Activation functions give neural networks their power  by  introducing non-linearity, allowing them to model complex relationships.
+
 - Linear
 
   <img src="images/linear-eq.png" title="f(x) = x" />

@@ -85,4 +85,9 @@ True Values:
 
 ###### Collaborations in implementing and maintaining this project are welcome. Kindly reach out to me if interested.
 
+## References 📚
+
+- Deep Learning Specialization, Andrew NG - Coursera
+- [Machine Learning Cheatsheet](https://ml-cheatsheet.readthedocs.io/en/latest/index.html)
+
 > &copy; 2020 Ryan Dsilva
