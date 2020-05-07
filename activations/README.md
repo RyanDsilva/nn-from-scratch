@@ -8,6 +8,8 @@
 
 Activation functions live inside each neuron in the neural network layers and modify the data they receive before passing it to the next layer. Activation functions give neural networks their power  by  introducing non-linearity, allowing them to model complex relationships.
 
+`x: input`
+
 - Linear
 
   <img src="images/linear-eq.png" title="f(x) = x" />
@@ -47,6 +49,8 @@ Activation functions live inside each neuron in the neural network layers and mo
   <br>
 
 - Gaussian Error Linear Units (GeLU)
+
+  `err: error function`
 
   <img src="images/gelu-eq.png" title="f(x) = \frac{x(1+err(\frac{x}{\sqrt{2}}))}{2}" />
   <br>
