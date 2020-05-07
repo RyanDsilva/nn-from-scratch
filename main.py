@@ -33,7 +33,7 @@ nn.add(Activation(Tanh, dTanh))
 
 # Training
 nn.useLoss(MSE, dMSE)
-nn.fit(x_train[0:1000], y_train[0:1000], epochs=config.epochs,
+nn.fit(x_train[0:2000], y_train[0:2000], epochs=config.epochs,
        learning_rate=config.learning_rate)
 
 # Prediction
