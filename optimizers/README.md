@@ -6,9 +6,13 @@
 
 ## Optimizer Functions
 
+Optimizer Functions help us update the parameters in the most efficient way possible. Optimizers update the weight parameters and bias terms to minimize the loss function to achieve global minimum.
+
 - Gradient Descent
 
   <img src="images/gd.svg">
+
+  `W: weights | dW: weights gradient (obtained from loss function) | alpha: learning rate`
 
 - Gradient Descent with Momentum
 
