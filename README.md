@@ -10,6 +10,13 @@
 
 #### This repository has detailed math equations and graphs for every feature implemented that can be used to serve as basis for greater, in-depth understanding of Neural Networks
 
+## Contents 📑
+
+- [Core Concepts](./core)
+- [Activation Functions](./activations)
+- [Loss Functions](./loss)
+- [Optimizers](./optimizers)
+
 ## Setup 💻
 
 ```bash
@@ -37,25 +44,9 @@ epoch 2/30      error=0.099688
 epoch 3/30      error=0.082054
 epoch 4/30      error=0.070288
 epoch 5/30      error=0.061518
-epoch 6/30      error=0.054688
-epoch 7/30      error=0.049105
-epoch 8/30      error=0.044311
-epoch 9/30      error=0.040242
-epoch 10/30     error=0.036440
-epoch 11/30     error=0.033126
-epoch 12/30     error=0.030299
-epoch 13/30     error=0.027805
-epoch 14/30     error=0.025817
-epoch 15/30     error=0.024215
-epoch 16/30     error=0.022779
-epoch 17/30     error=0.021474
-epoch 18/30     error=0.020222
-epoch 19/30     error=0.019045
-epoch 20/30     error=0.017988
-epoch 21/30     error=0.017067
-epoch 22/30     error=0.016288
-epoch 23/30     error=0.015587
-epoch 24/30     error=0.014911
+.....
+.....
+.....
 epoch 25/30     error=0.014255
 epoch 26/30     error=0.013660
 epoch 27/30     error=0.013108
