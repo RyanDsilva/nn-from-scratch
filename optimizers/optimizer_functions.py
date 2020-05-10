@@ -22,6 +22,21 @@ def GradientDescent(w, b, dW, dB, learning_rate=0.01):
 
 
 def Momentum(w, b, dW, dB, learning_rate, beta):
+    """Implements Gradient Descent with Momentum to find minima of cost function
+
+    Parameters:
+    - w (numpy array): weights matrix
+    - b (numpy array): bias matrix
+    - dW (numpy array): gradient of weights matrix wrt cost function
+    - dB (numpy array): gradient of bias matrix wrt cost function
+    - learning_rate (double): learning rate used to update weights
+    - beta (double): 
+
+    Returns:
+    - w_updated (numpy array): updated weights
+    - b_updated (numpy array): updated bias
+
+    """
     pass
 
 
