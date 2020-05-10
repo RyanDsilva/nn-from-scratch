@@ -11,8 +11,9 @@ class Network:
         self.loss = loss
         self.dloss = dloss
 
-    def useOptimizer(self, optimizer):
+    def useOptimizer(self, optimizer, learning_rate):
         self.optimizer = optimizer
+        self.learning_rate = learning_rate
 
     def predict(self, input_data):
         samples = len(input_data)
@@ -24,7 +25,7 @@ class Network:
             result.append(output)
         return result
 
-    def fit(self, x_train, y_train, epochs, learning_rate):
+    def fit(self, x_train, y_train, epochs):
         samples = len(x_train)
         for i in range(epochs):
             err = 0
@@ -35,6 +36,7 @@ class Network:
                 err += self.loss(y_train[j], output)
                 error = self.dloss(y_train[j], output)
                 for layer in reversed(self.layers):
-                    error = layer.backward_propagation(error, self.optimizer)
+                    error = layer.backward_propagation(
+                        error, self.optimizer, self.learning_rate)
             err /= samples
             print('epoch %d/%d\terror=%f' % (i+1, epochs, err))

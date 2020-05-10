@@ -21,7 +21,7 @@ def GradientDescent(w, b, dW, dB, learning_rate=0.01):
     return w_updated, b_updated
 
 
-def Momentum(w, b, dW, dB, learning_rate, beta):
+def Momentum(w, b, dW, dB, learning_rate=0.01, beta=0.9):
     """Implements Gradient Descent with Momentum to find minima of cost function
 
     Parameters:
