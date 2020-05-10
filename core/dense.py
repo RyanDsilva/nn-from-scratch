@@ -1,5 +1,6 @@
 from .layer import Layer
 import numpy as np
+import config
 
 
 class Dense(Layer):
@@ -14,10 +15,12 @@ class Dense(Layer):
         self.output = np.dot(self.input, self.weights) + self.bias
         return self.output
 
-    def backward_propagation(self, output_error, learning_rate):
+    def backward_propagation(self, output_error, optimizer_fn):
         input_error = np.dot(output_error, self.weights.T)
         dW = np.dot(self.input.T, output_error)
         dB = output_error
-        self.weights -= learning_rate * dW
-        self.bias -= learning_rate * dB
+        w_updated, b_updated = optimizer_fn(
+            self.weights, self.bias, dW, dB, config.learning_rate)
+        self.weights = w_updated
+        self.bias = b_updated
         return input_error

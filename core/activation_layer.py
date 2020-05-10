@@ -11,5 +11,5 @@ class Activation(Layer):
         self.output = self.activation(self.input)
         return self.output
 
-    def backward_propagation(self, output_error, learning_rate):
+    def backward_propagation(self, output_error, optimizer_fn):
         return self.dactivation(self.input) * output_error
