@@ -9,14 +9,16 @@ class Dense(Layer):
     def __init__(self, input_size, output_size):
         self.weights = np.random.rand(input_size, output_size) - 0.5
         self.bias = np.random.rand(1, output_size) - 0.5
-        self.v_weights = np.zeros_like(self.weights) + 0.0
-        self.v_bias = np.zeros_like(self.bias) + 0.0
+        self.v_weights = np.zeros_like(self.weights) + 0.0  # v variable for each layer
+        self.v_bias = np.zeros_like(self.bias) + 0.0  # v variable for each layer biases
         print(self.v_weights.shape)
         print(self.v_bias.shape)
 
     def forward_propagation(self, input_data):
         self.input = input_data
-        self.output = np.dot(self.input, self.weights) + self.bias
+        self.output = (
+            np.dot(self.input, self.weights) + self.bias
+        )  # showing broadcast error :operands could not be broadcast together with shapes (784,50) (100,50)
         return self.output
 
     def backward_propagation(self, output_error, optimizer_fn, learning_rate):
@@ -29,6 +31,8 @@ class Dense(Layer):
         )
         # w_updated, b_updated = optimizer_fn.GradientDescent(
         #     self.weights, self.bias, dW, dB, learning_rate)
+
+        ### updates
         self.weights = w_updated
         print("Updated weight shape:", self.weights.shape)
         self.bias = b_updated
