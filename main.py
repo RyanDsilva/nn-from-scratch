@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 import config
 from core.network import Network
@@ -7,9 +8,9 @@ from core.activation_layer import Activation
 from activations.activation_functions import Tanh, dTanh
 from loss.loss_functions import MSE, dMSE
 
-# from optimizers.optimizer_functions import GradientDescent
+from optimizers.optimizer_functions import GradientDescent
 
-from optimizers.optimizer_functions import Momentum
+# from optimizers.optimizer_functions import Momentum
 
 from keras.datasets import mnist
 from keras.utils import np_utils
@@ -36,9 +37,11 @@ nn.add(Dense(50, 10))
 nn.add(Activation(Tanh, dTanh))
 
 # Training
+
 nn.useLoss(MSE, dMSE)
-nn.useOptimizer(Momentum(), learning_rate=config.learning_rate)
+nn.useOptimizer(GradientDescent(), learning_rate=config.learning_rate)
 nn.fit(x_train[0:2000], y_train[0:2000], epochs=config.epochs)
+
 
 # Prediction
 out = nn.predict(x_test[0:2])

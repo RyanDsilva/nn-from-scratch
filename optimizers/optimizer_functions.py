@@ -19,7 +19,7 @@ class GradientDescent:
     """
         w_updated = w - learning_rate * dW
         b_updated = b - learning_rate * dB
-        return w_updated, b_updated
+        return w_updated, b_updated, vw, vb
 
 
 class Momentum:
