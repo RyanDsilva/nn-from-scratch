@@ -6,7 +6,9 @@ from core.dense import Dense
 from core.activation_layer import Activation
 from activations.activation_functions import Tanh, dTanh
 from loss.loss_functions import MSE, dMSE
+
 # from optimizers.optimizer_functions import GradientDescent
+
 from optimizers.optimizer_functions import Momentum
 
 from keras.datasets import mnist
@@ -14,19 +16,19 @@ from keras.utils import np_utils
 
 # Load MNIST
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
-x_train = x_train.reshape(x_train.shape[0], 1, 28*28)
-x_train = x_train.astype('float32')
+x_train = x_train.reshape(x_train.shape[0], 1, 28 * 28)
+x_train = x_train.astype("float32")
 x_train /= 255
 y_train = np_utils.to_categorical(y_train)
 
-x_test = x_test.reshape(x_test.shape[0], 1, 28*28)
-x_test = x_test.astype('float32')
+x_test = x_test.reshape(x_test.shape[0], 1, 28 * 28)
+x_test = x_test.astype("float32")
 x_test /= 255
 y_test = np_utils.to_categorical(y_test)
 
 # Model
 nn = Network()
-nn.add(Dense(28*28, 100))
+nn.add(Dense(28 * 28, 100))
 nn.add(Activation(Tanh, dTanh))
 nn.add(Dense(100, 50))
 nn.add(Activation(Tanh, dTanh))
