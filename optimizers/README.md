@@ -18,6 +18,8 @@ Optimizer Functions help us update the parameters in the most efficient way poss
 
   <img src="images/momentum.svg">
 
+  `vdW: accumulator for weight parameter | beta: momentum term (dampening factor) | dJ/dW: weights gradient (obtained from loss function)`
+
 - RMSProp
 
   <img src="images/rms_prop.svg" />
