@@ -66,26 +66,47 @@ True Values:
 
 ## Roadmap 📑
 
-- [x] Basic Activation Functions
-- [x] Basic Loss Functions
-- [x] Gradient Descent
+- [ ] Activation Functions
+  - [x] Linear
+  - [x] Sigmoid
+  - [x] Tanh
+  - [x] Tanh
+  - [x] ReLu
+  - [ ] LeakyReLu
+  - [ ] SoftMax
+  - [ ] GeLu
+- [ ] Loss Functions
+  - [x] MAE
+  - [x] MSE
+  - [ ] CrossEntropy
+- [ ] Optimizers Functions
+  - [x] Gradient Descent
+  - [x] Gradient Descent w/ Momentum
+  - [ ] Nestrov's Accelerated
+  - [ ] RMSProp
+  - [ ] Adam
+- [ ] Regularization
+  - [ ] L1
+  - [ ] L2
+  - [ ] Dropout
 - [x] Layer Architecture
 - [x] Wrapper Classes
 - [x] Hyperparameters Configuration
-- [ ] Exotic Functions
-  - [ ] SoftMax Activation
-  - [ ] Gradient Descent w/ Momentum
-  - [ ] RMSProp Optimizer
-  - [ ] Adam Optimizer
-  - [ ] CrossEntropy Loss Function
-  - [ ] GeLu Activation
-- [ ] Regularization
 - [ ] Clean Architecture
 - [ ] UI (Similar to Tensorflow Playground)
 
 ##### This project is not meant to be production ready but instead serve as the foundation repository to understand the in-depth working of Neural Networks down to the mathematics of the task.
 
 ###### Collaborations in implementing and maintaining this project are welcome. Kindly reach out to me if interested.
+
+## Contributers 🌟
+
+<a href="https://github.com/RyanDsilva">
+  <img src="https://github.com/RyanDsilva.png?size=75" style="border-radius:50%">
+</a>
+<a href="https://github.com/sanfernoronha">
+  <img src="https://github.com/sanfernoronha.png?size=75" style="border-radius:50%">
+</a>
 
 ## References 📚
 
