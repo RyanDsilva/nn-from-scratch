@@ -17,8 +17,8 @@ Optimizer Functions help us update the parameters in the most efficient way poss
 - Gradient Descent with Momentum
 
   <img src="images/momentum.svg">
-  
-  `vdW: accumulator for weight parameter | beta: damping factor | dJ/dW: weights gradient (obtained from loss function)`
+
+  `vdW: accumulator for weight parameter | beta: momentum term (dampening factor) | dJ/dW: weights gradient (obtained from loss function)`
 
 - RMSProp
 

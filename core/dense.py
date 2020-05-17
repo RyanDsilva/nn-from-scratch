@@ -9,14 +9,8 @@ class Dense(Layer):
     def __init__(self, input_size, output_size):
         self.weights = np.random.rand(input_size, output_size) - 0.5
         self.bias = np.random.rand(1, output_size) - 0.5
-        self.vW = np.zeros([input_size, output_size]) + 0.0
-        # (
-        #     np.zeros((input_size, output_size)) + 0.0
-        # )  # state initialization for every layer
-        self.vB = np.zeros([1, output_size]) + 0.0
-        # (
-        #     np.zeros((1, output_size)) + 0.0
-        # )  # state initialization for every layer
+        self.vW = np.zeros([input_size, output_size])
+        self.vB = np.zeros([1, output_size])
 
     def forward_propagation(self, input_data):
         self.input = input_data
