@@ -16,6 +16,7 @@ class Dense(Layer):
         self.input = input_data
         self.output = np.dot(self.input, self.weights) + self.bias
         return self.output
+  
 
     def backward_propagation(self, output_error, optimizer_fn, learning_rate):
         input_error = np.dot(output_error, self.weights.T)
