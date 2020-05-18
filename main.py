@@ -36,7 +36,7 @@ nn.add(Activation(Tanh, dTanh))
 # Training
 
 nn.useLoss(MSE, dMSE)
-nn.useOptimizer(Momentum(), learning_rate=config.learning_rate)
+nn.useOptimizer(Momentum(nestrov=True), learning_rate=config.learning_rate , beta = config.beta)
 nn.fit(x_train[0:2000], y_train[0:2000], epochs=config.epochs)
 
 
