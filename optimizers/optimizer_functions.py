@@ -56,10 +56,10 @@ class Momentum:
 
             vW_prev = vW
             vB_prev = vB
-            vW = beta * vW - learning_rate * dW
-            vB = beta * vB - learning_rate * dB
-            w = w - (beta * vW_prev) + ((1 + beta) * vW)
-            b = b - (beta * vB_prev) + ((1 + beta) * vB)
+            vW = beta * vW + (1-beta) * dW
+            vB = beta * vB + (1-beta) * dB
+            w = w - learning_rate * ((beta * vW_prev) + ((1 - beta) * vW))
+            b = b - learning_rate * ((beta * vB_prev) + ((1 - beta) * vB))
             w_updated = w
             b_updated = b
 
