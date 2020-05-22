@@ -7,7 +7,7 @@ from core.dense import Dense
 from core.activation_layer import Activation
 from activations.activation_functions import Tanh, dTanh
 from loss.loss_functions import MSE, dMSE
-from optimizers.optimizer_functions import GradientDescent
+from optimizers.optimizer_functions import Momentum
 
 from keras.datasets import mnist
 from keras.utils import np_utils
@@ -36,7 +36,7 @@ nn.add(Activation(Tanh, dTanh))
 # Training
 
 nn.useLoss(MSE, dMSE)
-nn.useOptimizer(GradientDescent(),
+nn.useOptimizer(Momentum(nestrov=False),
                 learning_rate=config.learning_rate, beta=config.beta)
 nn.fit(x_train[0:2000], y_train[0:2000], epochs=config.epochs)
 

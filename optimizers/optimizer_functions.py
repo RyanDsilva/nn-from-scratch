@@ -26,7 +26,7 @@ class Momentum:
     def __init__(self, nestrov=False):
         self.nestrov = nestrov
 
-    def minimize(self, w, b, dW, dB, vW, vB, learning_rate=0.01, beta=0.5):
+    def minimize(self, w, b, dW, dB, vW, vB, learning_rate=0.01, beta=0.9):
         """Implements Gradient Descent with Momentum to find minima of cost function
 
         Parameters:
@@ -47,10 +47,10 @@ class Momentum:
 
         """
         if (self.nestrov == False):
-            vW = beta * vW + learning_rate * dW
-            vB = beta * vB + learning_rate * dB
-            w_updated = w - vW
-            b_updated = b - vB
+            vW = beta * vW + (1-beta) * dW
+            vB = beta * vB + (1-beta) * dB
+            w_updated = w - learning_rate * vW
+            b_updated = b - learning_rate * vB
 
         elif (self.nestrov == True):
 
@@ -58,8 +58,8 @@ class Momentum:
             vB_prev = vB
             vW = beta * vW - learning_rate * dW
             vB = beta * vB - learning_rate * dB
-            w += - beta * vW_prev + (1 + beta) * vW
-            b += - beta * vB_prev + (1 + beta) * vB
+            w = w - (beta * vW_prev) + ((1 + beta) * vW)
+            b = b - (beta * vB_prev) + ((1 + beta) * vB)
             w_updated = w
             b_updated = b
 
