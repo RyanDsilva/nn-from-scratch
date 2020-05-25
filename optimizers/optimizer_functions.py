@@ -58,16 +58,24 @@ class Momentum:
             vB_prev = vB
             vW = beta * vW + (1-beta) * dW
             vB = beta * vB + (1-beta) * dB
-            w = w - learning_rate * ((beta * vW_prev) + ((1 - beta) * vW))
-            b = b - learning_rate * ((beta * vB_prev) + ((1 - beta) * vB))
+            # need to check code here
+            w = w - learning_rate * ((beta * vW_prev) + ((1 - beta) * dW))
+            b = b - learning_rate * ((beta * vB_prev) + ((1 - beta) * dB))
             w_updated = w
             b_updated = b
 
         return w_updated, b_updated, vW, vB
 
 
-def RMSProp(w, b, dW, dB, learning_rate, beta, epsilon):
-    pass
+class RMSProp:
+    def minimize(self, w, b, dW, dB, sdW, sdB, learning_rate=0.1, beta=0.999):
+        sdW = beta * sdW + (1 - beta) * np.square(dW/2000)
+
+        sdB = beta * sdB + (1 - beta) * np.square(dB/2000)
+        w_updated = w - learning_rate*dW/2000*np.sqrt(sdW+ float(pow(10,-8)))
+        b_updated = b - learning_rate*dB/2000*np.sqrt(sdB+ float(pow(10,-8)))
+
+        return w_updated, b_updated, sdW, sdB
 
 
 def Adam(w, b, dW, dB, learning_rate, beta1, beta2, epsilon):
