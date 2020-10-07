@@ -50,6 +50,13 @@ def Softmax(X):
     res = exp/exp_sum
     return res
 
+# nomalizing the input X
+def StableSoftmax(X):
+    shift = X - np.max(X)
+    exp = np.exp(shift)
+    return exp/np.sum(exp)
+
+
 
 def GeLu(X):
     res = 0.5 * X * (1 + np.tanh(np.sqrt(2 / np.pi) *
