@@ -1,6 +1,12 @@
 import numpy as np
 
 
+def Identity(X):
+    return X
+
+def BinaryStep(X):
+    return 0 if X < 0 else 1
+    
 def Linear(X, constant=1):
     return constant*X
 
