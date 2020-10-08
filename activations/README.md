@@ -13,7 +13,7 @@ Activation functions live inside each neuron in the neural network layers and mo
 
 - Identity
 
-    <img src="images/identity-eq.png" title="f(x) = x" />
+    <img src="images/identity_eq.png" title="f(x) = x" />
     <br>
     <img src="images/identity.png" height="200px">
 
@@ -26,7 +26,7 @@ Activation functions live inside each neuron in the neural network layers and mo
 
 - Linear
 
-  <img src="images/linear-eq.png" title="f(x) = cx" />
+  <img src="images/linear_eq.png" title="f(x) = cx" />
   <br>
   <img src="images/linear.png" height="200px">
 
