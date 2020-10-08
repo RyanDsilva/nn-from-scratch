@@ -13,7 +13,7 @@ Activation functions live inside each neuron in the neural network layers and mo
 
 - Identity
 
-    <img src="images/identity_eq.png" title="f(x) = x" />
+    <img src="images/Identity_eq.png" title="f(x) = x" />
     <br>
     <img src="images/identity.png" height="200px">
 
