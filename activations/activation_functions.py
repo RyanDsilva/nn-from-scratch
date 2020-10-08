@@ -56,6 +56,9 @@ def StableSoftmax(X):
     exp = np.exp(shift)
     return exp/np.sum(exp)
 
+def dSoftmax(X):
+    pass
+
 
 
 def GeLu(X):
