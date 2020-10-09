@@ -50,14 +50,18 @@ def Softmax(X):
     res = exp/exp_sum
     return res
 
-# nomalizing the input X
+
 def StableSoftmax(X):
+    """A stable implementation of the softmax function which prevents division by a large number (overflow) """
     shift = X - np.max(X)
     exp = np.exp(shift)
     return exp/np.sum(exp)
 
 def dSoftmax(X):
-    pass
+    """Derivation of the softmax activation function. Derived from the iterative implementation which uses jacobians """
+    s = Softmax(X)
+    s = s.reshape(-1,1)
+    return np.diagflat(s) - np.dot(s, s.T)
 
 
 
