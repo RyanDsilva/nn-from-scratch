@@ -102,10 +102,10 @@ True Values:
 ## Contributers 🌟
 
 <a href="https://github.com/RyanDsilva">
-  <img src="https://github.com/RyanDsilva.png?size=75" style="border-radius:50%">
+  <img src="https://github.com/RyanDsilva.png?size=75" style="border-radius:50%;">
 </a>
 <a href="https://github.com/sanfernoronha">
-  <img src="https://github.com/sanfernoronha.png?size=75" style="border-radius:50%">
+  <img src="https://github.com/sanfernoronha.png?size=75" style="border-radius:50%;">
 </a>
 
 ## References 📚

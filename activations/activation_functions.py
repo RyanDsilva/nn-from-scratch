@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def Identity(X):
     """
     Identity fuction is the basic activation function
@@ -13,6 +14,7 @@ def Identity(X):
     """
     return X
 
+
 def BinaryStep(X):
     """
     BinaryStep fuction is the basic activation function
@@ -25,6 +27,7 @@ def BinaryStep(X):
      int (0 OR 1)
     """
     return 0 if X < 0 else 1
+
 
 def Linear(X, constant=1):
     return constant*X
