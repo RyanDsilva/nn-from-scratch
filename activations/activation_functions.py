@@ -79,6 +79,20 @@ def Softmax(X):
     return res
 
 
+def StableSoftmax(X):
+    """A stable implementation of the softmax function which prevents division by a large number (overflow) """
+    shift = X - np.max(X)
+    exp = np.exp(shift)
+    return exp/np.sum(exp)
+
+def dSoftmax(X):
+    """Derivation of the softmax activation function. Derived from the iterative implementation which uses jacobians """
+    s = Softmax(X)
+    s = s.reshape(-1,1)
+    return np.diagflat(s) - np.dot(s, s.T)
+
+
+
 def GeLu(X):
     res = 0.5 * X * (1 + np.tanh(np.sqrt(2 / np.pi) *
                                  (X + 0.044715 * np.power(X, 3))))
