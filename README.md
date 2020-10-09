@@ -72,8 +72,8 @@ True Values:
   - [x] Tanh
   - [x] Tanh
   - [x] ReLu
-  - [ ] LeakyReLu
-  - [ ] SoftMax
+  - [x] LeakyReLu
+  - [x] SoftMax
   - [ ] GeLu
 - [ ] Loss Functions
   - [x] MAE
@@ -82,8 +82,8 @@ True Values:
 - [ ] Optimizers Functions
   - [x] Gradient Descent
   - [x] Gradient Descent w/ Momentum
-  - [ ] Nestrov's Accelerated
-  - [ ] RMSProp
+  - [x] Nestrov's Accelerated
+  - [x] RMSProp
   - [ ] Adam
 - [ ] Regularization
   - [ ] L1
