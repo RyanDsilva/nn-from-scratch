@@ -8,11 +8,25 @@
 
 Activation functions live inside each neuron in the neural network layers and modify the data they receive before passing it to the next layer. Activation functions give neural networks their power  by  introducing non-linearity, allowing them to model complex relationships.
 
+
 `x: input`
+
+- Identity
+
+    <img src="images/Identity_eq.png" title="f(x) = x" />
+    <br>
+    <img src="images/identity.png" height="200px">
+
+
+- BinaryStep
+
+    <img src="images/binarystep_eq.png" title="f(x) = \begin{cases} 0 & \text{ if } x<= 0 \\ 1 & \text{ if } x>0 \end{cases}" />
+    <br>
+    <img src="images/binarystep.png" height="200px">
 
 - Linear
 
-  <img src="images/linear-eq.png" title="f(x) = x" />
+  <img src="images/linear_eq.png" title="f(x) = cx" />
   <br>
   <img src="images/linear.png" height="200px">
 

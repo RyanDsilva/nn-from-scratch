@@ -1,5 +1,30 @@
 import numpy as np
 
+def Identity(X):
+    """
+    Identity fuction is the basic activation function
+    It return the same input value as output.
+
+    Parameters:
+    - X: int ,-Inf to +Inf
+
+    Returns:
+    X , -Inf to +Inf
+    """
+    return X
+
+def BinaryStep(X):
+    """
+    BinaryStep fuction is the basic activation function
+    It return 0 for non positive value  and 1 for all the positive
+
+    Parameters:
+    - X: int -Inf to +Inf
+
+     Returns:
+     int (0 OR 1)
+    """
+    return 0 if X < 0 else 1
 
 def Linear(X, constant=1):
     return constant*X
